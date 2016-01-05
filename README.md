@@ -98,6 +98,7 @@ gulp的全局安装
 $ npm install --global gulp
 ```
 gulp本身不提供js压缩合并等功能，需要使用gulp的相关插件。
+
 1. css压缩 gulp-cssnano
 2. js压缩  gulp-uglify
 3. js合并  gulp-concat
