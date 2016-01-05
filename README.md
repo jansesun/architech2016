@@ -103,6 +103,7 @@ gulp本身不提供js压缩合并等功能，需要使用gulp的相关插件。
 2. js压缩  gulp-uglify
 3. js合并  gulp-concat
 4. 重命名  gulp-rename
+
 gulp插件的安装
 ```
 $ npm install gulp-cssnano gulp-uglify gulp-concat gulp-rename --save-dev
