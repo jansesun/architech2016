@@ -1,4 +1,4 @@
-define(function(require, exports, module) {
+define('module/Dialog', function(require) {
 	'use strict';
 	var $ = require('jquery'), Dialog;
 	/**

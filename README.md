@@ -60,6 +60,32 @@ define(function(require, export, module) {
 	return Dialog;
 });
 ```
+requirejs 署名模块定义，便于合并文件时引用模块
+```
+define('module/Dialog', function(require) {
+    'use strict';
+    // 异步加载依赖
+    var $ = require('jquery'), Dialog;
+    Dialog = function(id, config) {
+        var Self = this;
+        config = config || {};
+        if($.type(id) === 'string') {
+            Self._body = $('#' + id);
+        } else {
+            Self._body = $(id);
+        }
+        $.extend(Self, config);
+        Self.init();
+    };
+    Dialog.prototype = {
+        init: function() {
+            console.log('init');
+        }
+    };
+    // 返回模块接口
+    return Dialog;
+});
+```
 requirejs 同步模块定义
 ```
 define(['jquery'], function($) {
